@@ -2,6 +2,7 @@ import React from "react"
 import Scrollspy from "react-scrollspy"
 import { Navbar, Nav } from "react-bootstrap"
 import Scroller from './scroller'
+import Countdown from '../components/Countdown.js';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -10,6 +11,8 @@ export default class Header extends React.Component {
   }
 
   render() {
+    const currentDate = new Date();
+    const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
     return (
       <>
         <Navbar className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" expand="lg"
@@ -20,16 +23,22 @@ export default class Header extends React.Component {
             <Navbar.Collapse id="navbarResponsive">
               <Nav className="navbar-nav ml-auto my-2 my-lg-0">
                 <Scrollspy className="navbar-nav"
-                           items={["about", "services", "portfolio", "contact"]}
+                           items={["about", "speakers", "sponsors", "blog", "team", "contact"]}
                            currentClassName="active" rootEl={"#mainNav"} offset={-75}>
                   <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href="#about" onClick={Scroller.handleAnchorScroll}>About</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#services" onClick={Scroller.handleAnchorScroll}>Services</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href="#speakers" onClick={Scroller.handleAnchorScroll}>Speakers</Nav.Link>
                   </li>
                   <li className="nav-item">
-                    <Nav.Link className={"js-scroll-trigger"} href="#portfolio" onClick={Scroller.handleAnchorScroll}>Portfolio</Nav.Link>
+                    <Nav.Link className={"js-scroll-trigger"} href="#sponsors" onClick={Scroller.handleAnchorScroll}>Sponsors</Nav.Link>
+                  </li>
+                  <li className="nav-item">
+                    <Nav.Link className={"js-scroll-trigger"} href="#blog" onClick={Scroller.handleAnchorScroll}>Blog</Nav.Link>
+                  </li>
+                  <li className="nav-item">
+                    <Nav.Link className={"js-scroll-trigger"} href="#team" onClick={Scroller.handleAnchorScroll}>Team</Nav.Link>
                   </li>
                   <li className="nav-item">
                     <Nav.Link className={"js-scroll-trigger"} href="#contact" onClick={Scroller.handleAnchorScroll}>Contact</Nav.Link>
@@ -40,11 +49,13 @@ export default class Header extends React.Component {
           </div>
         </Navbar>
         <header className="masthead">
+        <div className="absolute-landing"><img src={require("../images/element_2.svg")}/></div>
           <div className="container h-100">
             <div className="row h-100 align-items-center justify-content-center text-center">
               <div className="col-lg-10 align-self-end">
-                <h1 className="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap
-                  Themes</h1>
+              
+                <h1 className="text-uppercase text-white font-weight-bold">Escaping the void</h1>
+                <Countdown date={`${year}-04-11T00:00:00`} />
                 <hr className="divider my-4"/>
               </div>
               <div className="col-lg-8 align-self-baseline">

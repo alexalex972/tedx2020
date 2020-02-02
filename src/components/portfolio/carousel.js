@@ -1,34 +1,44 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { Carousel } from "react-bootstrap"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCol,
+} from "mdbreact"
 
-import "./carousel.scss"
-
-const PortfolioCarousel = ({ images, current }) => {
-  const carouselItems = images.map((image, index) =>
-    <Carousel.Item key={index}>
-      <figure>
-        <Img fluid={image.node.childImageSharp.fluid}/>
-        <figcaption>
-          <div className="bottom-bar">
-            <div className="counter">{index + 1} of {images.length}</div>
-          </div>
-        </figcaption>
-      </figure>
-    </Carousel.Item>
-  );
+const PortfolioCarousel = ({ posts, current }) => {
+  const carouselItems = posts.map(({ node }, index) => (
+    <div className="col-log-4" style={{marginBottom: '1rem'}} key={index}>
+    <MDBCol style={{ maxWidth: "22rem" }}>
+      <MDBCard>
+        <MDBCardImage
+          className="img-fluid"
+          src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+          waves
+        />
+        <MDBCardBody>
+          <MDBCardTitle>
+            <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              {node.frontmatter.title}
+            </Link>
+          </MDBCardTitle>
+          <MDBCardText dangerouslySetInnerHTML={{
+                __html: node.frontmatter.description || node.excerpt,
+              }}>
+          </MDBCardText>
+        </MDBCardBody>
+      </MDBCard>
+    </MDBCol>
+    </div>
+  ))
 
   return (
-    <Carousel interval={null} indicators={false} defaultActiveIndex={current} slide={false}>
-      {carouselItems}
-    </Carousel>
-  );
-}
-
-PortfolioCarousel.propTypes = {
-  images: PropTypes.array.isRequired,
-  current: PropTypes.number.isRequired,
+    <div className="row" style={{margin: '0 auto'}}>{carouselItems}</div>
+  )
 }
 
 export default PortfolioCarousel

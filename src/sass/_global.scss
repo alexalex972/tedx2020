@@ -5,6 +5,77 @@ html {
 	height: 100%;
 }
 
+.main {
+	background-color: rgb(0, 0, 0);
+}
+
+.event {
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - #{$navbar-height});
+	// replace the masthead.jpg image in the /img directory to change the image
+	// if the image name change, make sure to update the url path below!
+	// background: linear-gradient(to bottom, #{fade-out($brown, .2)} 0%,#{fade-out($brown, .2)} 100%), url('../images/header.png');
+	background-color: #000000;
+	// background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	h1 {
+		font-size: 2.25rem;
+	}
+	@include media-breakpoint-up(lg) {
+		height: 100vh;
+		min-height: 40rem;
+		padding-top: $navbar-height;
+		padding-bottom: 0;
+		p {
+			font-size: 1.15rem;
+		}
+		h1 {
+			font-size: 3rem;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		h1 {
+			font-size: 3.5rem;
+		}
+	}
+}
+
+.about {
+	padding-top: 10rem;
+	padding-bottom: calc(10rem - #{$navbar-height});
+	// replace the masthead.jpg image in the /img directory to change the image
+	// if the image name change, make sure to update the url path below!
+	// background: linear-gradient(to bottom, #{fade-out($brown, .2)} 0%,#{fade-out($brown, .2)} 100%), url('../images/header.png');
+	background-color: #000000;
+	// background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	h1 {
+		font-size: 2.25rem;
+	}
+	@include media-breakpoint-up(lg) {
+		height: 100vh;
+		min-height: 40rem;
+		padding-top: $navbar-height;
+		padding-bottom: 0;
+		p {
+			font-size: 1.15rem;
+		}
+		h1 {
+			font-size: 3rem;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		h1 {
+			font-size: 3.5rem;
+		}
+	}
+}
+
+
 // Typography
 .text-white-75 {
 	color: fade-out($white, .25);
@@ -26,6 +97,36 @@ hr.light {
 	font-family: $font-family-sans-serif;
 }
 
+div.absolute-landing {
+	position: absolute;
+	top: 0px;
+	height: 50vh;
+	width: 100vh;;
+	right: 0;
+	z-index: 0;
+  }
+
+  div.absolute-about img{
+	height: 50vh;
+	width: 50vh;
+	z-index: 0;
+  }
+
+  .carousel-control-next-icon{
+	  display: none;
+  }
+  .carousel-control-prev-icon{
+	display: none;
+}
+//   div.absolute-blog {
+// 	position: absolute;
+// 	top: -50px;
+// 	height: 100vh;
+// 	width: 200vh;;
+// 	right: 25vh;
+// 	z-index: 0;
+//   }
+
 .btn-xl {
 	padding: 1.25rem 2.25rem;
 	font-size: 0.85rem;
@@ -37,9 +138,35 @@ hr.light {
 
 // Page section padding
 .page-section {
+	position: relative;
 	padding: 8rem 0;
 }
 
+.Countdown{
+	color: white;
+	margin: 0 auto;
+	padding-bottom: 20px;
+  }
+  
+  .Countdown-col{
+	display: inline-block;
+  }
+  
+  .Countdown-col-element{
+	display: inline-block;
+	margin: 0 20px;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .Countdown-col-element strong{
+	font-size: 50px;
+  }
+
+.page-section-half {
+	height: 50vh;
+	position: relative;
+}
 // Modal
 .modal-backdrop {
 	background-color: #0b0b0b;
@@ -48,3 +175,21 @@ hr.light {
 .modal-backdrop.show {
 	opacity: 0.8;
 }
+
+.sponsor-img{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 125px;
+  }
+  
+  .sponsor-img img{
+	max-height: 90px;
+	width: auto;
+	max-width: 80%;
+	margin: 0 auto;
+	display: block;
+	transition: all .2s ease-in-out;
+  }
