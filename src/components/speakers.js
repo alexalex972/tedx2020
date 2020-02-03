@@ -4,14 +4,14 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 import Flipper from "../components/flipper"
 
-const Speakers = ({ images, current }) => {
-  const speakerItems = images.map(( node , index) => (
+const Speakers = ({ speakers }) => {
+  const speakerItems = speakers.map(( node , index) => (
     <div key={index} className="mx-auto col-lg-2 col-md-4">
       <Flipper 
-      image={node.childImageSharp.fluid} 
-      name={current[index].frontmatter.title}
-      description={current[index].frontmatter.description}
-      text={current[index].html}
+      image={node.frontmatter.featuredImage.childImageSharp.fluid} 
+      name={node.frontmatter.title}
+      description={node.frontmatter.description}
+      text={node.html}
       ></Flipper>
     </div>
   ))

@@ -1,6 +1,6 @@
 ---
 title: Jorgo Quiraj
-date: "2000-05-28T22:40:32.169Z"
+featuredImage: speaker1.png
 description: "Jorgo Quiraj Jorgo Quiraj Jorgo Quiraj Jorgo Quiraj"
 ---
 

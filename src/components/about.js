@@ -17,6 +17,7 @@ const CarouselPage = () => {
         showIndicators={true}
         className="z-depth-1"
         interval={200000}
+        style={{textAlign: 'justify'}}
       >
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">

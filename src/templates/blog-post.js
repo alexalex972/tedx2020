@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-
+import Img from "gatsby-image"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -29,13 +29,14 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
+          <div className="col-lg-4"><Img className="img-fluid" fluid={post.frontmatter.featuredImage.childImageSharp.fluid} ></Img></div>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr/>
           <footer>
           </footer>
         </article>
         </div>
-        {/* <nav>
+        <nav>
           <ul
             style={{
               display: `flex`,
@@ -60,7 +61,7 @@ class BlogPostTemplate extends React.Component {
               )}
             </li>
           </ul>
-        </nav> */}
+        </nav>
       </Layout>
     )
   }
@@ -83,6 +84,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
