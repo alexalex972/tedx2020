@@ -13,3 +13,42 @@
 @import "../sass/navbar.scss";
 @import "../sass/masthead.scss";
 @import "../sass/portfolio.scss";
+
+
+// #top, #left, #right {
+// 	background: #e20000;
+//     position: fixed;
+//     z-index: 99999;
+// 	}
+// 	#left, #right {
+// 		top: 0; bottom: 0;
+// 		width: 15px;
+// 		}
+// 		#left { left: 0; }
+// 		#right { right: 0; }
+		
+// 	#top, #bottom {
+// 		left: 0; right: 0;
+// 		height: 15px;
+// 		}
+// 		#top { top: 0; }
+//         #bottom { bottom: 0; position: relative;     z-index: 99999; 	background: #e20000;}
+
+		.header-text {
+			font-size: 5rem;
+		}
+
+        @media 
+
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+
+{
+	// #top, #bottom, #left, #right { display: none; }
+	.header-text {
+		font-size: 2rem;
+	}
+}

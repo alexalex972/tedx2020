@@ -1,122 +1,125 @@
 // Global styling for this template
 body,
 html {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
 }
 
 .main {
-	background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
 
 .event {
-	padding-top: 10rem;
-	padding-bottom: calc(10rem - #{$navbar-height});
-	// replace the masthead.jpg image in the /img directory to change the image
-	// if the image name change, make sure to update the url path below!
-	// background: linear-gradient(to bottom, #{fade-out($brown, .2)} 0%,#{fade-out($brown, .2)} 100%), url('../images/header.png');
-	background-color: #000000;
-	// background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-size: cover;
-	h1 {
-		font-size: 2.25rem;
-	}
-	@include media-breakpoint-up(lg) {
-		height: 100vh;
-		min-height: 40rem;
-		padding-top: $navbar-height;
-		padding-bottom: 0;
-		p {
-			font-size: 1.15rem;
-		}
-		h1 {
-			font-size: 3rem;
-		}
-	}
-	@include media-breakpoint-up(xl) {
-		h1 {
-			font-size: 3.5rem;
-		}
-	}
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - #{$navbar-height});
+  // replace the masthead.jpg image in the /img directory to change the image
+  // if the image name change, make sure to update the url path below!
+  // background: linear-gradient(to bottom, #{fade-out($brown, .2)} 0%,#{fade-out($brown, .2)} 100%), url('../images/header.png');
+  background-color: #000000;
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  h1 {
+    font-size: 2.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: $navbar-height;
+    padding-bottom: 0;
+    p {
+      font-size: 1.15rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
 }
 
 .about {
-	padding-top: 10rem;
-	padding-bottom: calc(10rem - #{$navbar-height});
-	// replace the masthead.jpg image in the /img directory to change the image
-	// if the image name change, make sure to update the url path below!
-	// background: linear-gradient(to bottom, #{fade-out($brown, .2)} 0%,#{fade-out($brown, .2)} 100%), url('../images/header.png');
-	background-color: #000000;
-	// background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-size: cover;
-	h1 {
-		font-size: 2.25rem;
-	}
-	@include media-breakpoint-up(lg) {
-		height: 100vh;
-		min-height: 40rem;
-		padding-top: $navbar-height;
-		padding-bottom: 0;
-		p {
-			font-size: 1.15rem;
-		}
-		h1 {
-			font-size: 3rem;
-		}
-	}
-	@include media-breakpoint-up(xl) {
-		h1 {
-			font-size: 3.5rem;
-		}
-	}
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - #{$navbar-height});
+  // replace the masthead.jpg image in the /img directory to change the image
+  // if the image name change, make sure to update the url path below!
+  // background: linear-gradient(to bottom, #{fade-out($brown, .2)} 0%,#{fade-out($brown, .2)} 100%), url('../images/header.png');
+  background-color: #000000;
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  h1 {
+    font-size: 2.25rem;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: $navbar-height;
+    padding-bottom: 0;
+    p {
+      font-size: 1.15rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
 }
 
-
+picture img:hover{
+	background-color: #e2000e;
+}
 // Typography
 .text-white-75 {
-	color: fade-out($white, .25);
+  color: fade-out($white, 0.25);
 }
 
 // Custom horizontal rules
 hr.divider {
-	max-width: 3.25rem;
-	border-width: 0.2rem;
-	border-color: $primary;
+  max-width: 3.25rem;
+  border-width: 0.2rem;
+  border-color: #e2000e;
 }
 
 hr.light {
-	border-color: $white;
+  border-color: $white;
 }
 
 // Button restyling
 .btn {
-	font-family: $font-family-sans-serif;
+  font-family: $font-family-sans-serif;
 }
 
 div.absolute-landing {
-	position: absolute;
-	top: 0px;
-	height: 50vh;
-	width: 100vh;;
-	right: 0;
-	z-index: 0;
-  }
+  position: absolute;
+  top: 0px;
+  height: 50vh;
+  width: 100vh;
+  right: 0;
+  z-index: 0;
+}
 
-  div.absolute-about img{
-	height: 50vh;
-	width: 50vh;
-	z-index: 0;
-  }
+div.absolute-about img {
+  height: 50vh;
+  width: 50vh;
+  z-index: 0;
+}
 
-  .carousel-control-next-icon{
-	  display: none;
-  }
-  .carousel-control-prev-icon{
-	display: none;
+.carousel-control-next-icon {
+  display: none;
+}
+.carousel-control-prev-icon {
+  display: none;
 }
 //   div.absolute-blog {
 // 	position: absolute;
@@ -128,68 +131,96 @@ div.absolute-landing {
 //   }
 
 .btn-xl {
-	padding: 1.25rem 2.25rem;
-	font-size: 0.85rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	border: none;
-	border-radius: 10rem;
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
 }
 
 // Page section padding
 .page-section {
-	position: relative;
-	padding: 8rem 0;
+  position: relative;
+  padding: 8rem 0;
 }
 
-.Countdown{
-	color: white;
-	margin: 0 auto;
-	padding-bottom: 20px;
-  }
-  
-  .Countdown-col{
-	display: inline-block;
-  }
-  
-  .Countdown-col-element{
-	display: inline-block;
-	margin: 0 20px;
-	display: flex;
-	flex-direction: column;
-  }
-  
-  .Countdown-col-element strong{
-	font-size: 50px;
-  }
+// picture img{
+// 	object-fit: contain !important;
+// }
+
+.Countdown {
+  color: white;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  padding: 3rem 0;
+  background-color: black;
+  -webkit-box-shadow: 0px 0px 0px 21px rgba(255,255,255,0.2);
+  -moz-box-shadow: 0px 0px 0px 21px rgba(255,255,255,0.2);
+  box-shadow: 0px 0px 0px 21px rgba(255,255,255,0.2);
+}
+
+.Countdown-col {
+  display: inline-block;
+}
+
+.Countdown-col-element {
+  display: inline-block;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Countdown-col-element strong {
+  font-size: 50px;
+}
 
 .page-section-half {
-	height: 50vh;
-	position: relative;
+  height: 50vh;
+  position: relative;
 }
 // Modal
 .modal-backdrop {
-	background-color: #0b0b0b;
+  background-color: #0b0b0b;
 }
 
 .modal-backdrop.show {
-	opacity: 0.8;
+  opacity: 0.8;
 }
 
-.sponsor-img{
-	width: 100%;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 125px;
-  }
-  
-  .sponsor-img img{
-	max-height: 90px;
-	width: auto;
-	max-width: 80%;
-	margin: 0 auto;
-	display: block;
-	transition: all .2s ease-in-out;
-  }
+.sponsor-img {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+}
+
+.sponsor-img img {
+  max-height: 90px;
+  width: auto;
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.header-text {
+  font-size: 5rem !important;
+}
+
+    @media 
+
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+
+{ 
+.header-text {
+font-size: 4rem !important;
+}
+}

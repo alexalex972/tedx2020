@@ -1,7 +1,7 @@
 // Base styling for the navbar
 #mainNav {
 	box-shadow: $box-shadow;
-	background-color: $white;
+	background-color: $black;
 	transition: background-color 0.2s ease;
 	.navbar-brand {
 		font-family: $font-family-sans-serif;
@@ -57,12 +57,11 @@
 		}
 	}
 }
-
 @include media-breakpoint-up(lg) {
 	// Navbar styling applied when the page is scrolled
 	.site-container.navbar-scrolled #mainNav {
 		box-shadow: $box-shadow;
-		background-color: $white;
+		background-color: $black;
 		.navbar-brand {
 			color: $gray-900;
 			&:hover {
@@ -72,7 +71,7 @@
 		.navbar-nav {
 			.nav-item {
 				.nav-link {
-					color: $gray-900;
+					color: $white;
 					&:hover {
 						color: $primary;
 					}

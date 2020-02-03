@@ -8,15 +8,15 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCol,
+  MDBContainer, MDBRow 
 } from "mdbreact"
 import Img from "gatsby-image"
 
 const PortfolioCarousel = ({ posts, current }) => {
   const carouselItems = posts.map(({ node }, index) => (
-    <div className="col-log-4" style={{marginBottom: '1rem'}} key={index}>
-    <MDBCol style={{ maxWidth: "22rem"}}>
+    <MDBCol key={index} lg="4">
       <MDBCard>
-      <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} ></Img>
+      <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid}></Img>
         <MDBCardBody>
           <MDBCardTitle>
             <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -30,11 +30,12 @@ const PortfolioCarousel = ({ posts, current }) => {
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
-    </div>
   ))
 
   return (
-    <div className="row" style={{margin: '0 auto'}}>{carouselItems}</div>
+    <MDBContainer>
+      <MDBRow>{carouselItems}</MDBRow>
+    </MDBContainer>
   )
 }
 
