@@ -1,10 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import {
-  MDBBtn,
   MDBCard,
   MDBCardBody,
-  MDBCardImage,
   MDBCardTitle,
   MDBCardText,
   MDBCol,
@@ -15,7 +13,7 @@ import Img from "gatsby-image"
 const PortfolioCarousel = ({ posts, current }) => {
   const carouselItems = posts.map(({ node }, index) => (
     <MDBCol key={index} lg="4">
-      <MDBCard>
+      <MDBCard style={{backgroundColor: 'black', color: 'rgba(255, 255, 255, 0.5)'}}>
       <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid}></Img>
         <MDBCardBody>
           <MDBCardTitle>

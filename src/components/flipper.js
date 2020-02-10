@@ -4,10 +4,8 @@ import {
   MDBBtn,
   MDBCard,
   MDBCardBody,
-  MDBCardImage,
   MDBCardTitle,
   MDBCardText,
-  MDBCol,
 } from "mdbreact"
 import Img from "gatsby-image"
 
@@ -37,14 +35,14 @@ class Flipper extends React.Component {
           <MDBCardBody>
             <MDBCardTitle>{this.props.name}</MDBCardTitle>
             <MDBCardText>{this.props.description}</MDBCardText>
-            <button onClick={this.handleClick}>Read More</button>
+            <MDBBtn color="danger" onClick={this.handleClick}>Read More</MDBBtn>
           </MDBCardBody>
         </MDBCard>
 
-        <MDBCard style={{ marginBottom: "15px" }}>
+        <MDBCard style={{ marginBottom: "15px" }} style={{backgroundColor: 'rgba(255, 255, 255, 0.5)', color: ''}}>
           <MDBCardBody>
-            <MDBCardText dangerouslySetInnerHTML={{ __html: this.props.text }}></MDBCardText>
-            <button onClick={this.handleClick}>Read Less</button>
+            <div dangerouslySetInnerHTML={{ __html: this.props.text }}></div>
+            <MDBBtn color="danger" onClick={this.handleClick}>Read Less</MDBBtn>
           </MDBCardBody>
         </MDBCard>
       </ReactCardFlip>

@@ -10,13 +10,10 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import "./layout.scss"
 import {
-  MDBMask,
-  MDBView,
   MDBContainer,
   MDBRow,
   MDBCol,
   MDBIcon,
-  MDBBtn,
 } from "mdbreact"
 
 const getScrollNode = element => {
@@ -86,10 +83,10 @@ export default class Layout extends React.Component {
               <MDBCol lg="4" className="text-center" style={{ color: "white" }}>
                 Copyright &copy; 2019 - TEDxAUBG
               </MDBCol>
-              <MDBCol lg="4" className="text-center">
-              <MDBIcon fab icon="facebook-f" size="2x" className="mr-5" style={{ color: "white" }} />
-              <MDBIcon fab icon="instagram" size="2x" className="mr-5" style={{ color: "white" }} />
-              <MDBIcon fab icon="linkedin-in" size="2x" style={{ color: "white" }} />
+              <MDBCol lg="4" className="text-center social-links">
+              <a className="facebook-icon" href="https://www.facebook.com/TEDxAUBG/" target="_blank"><MDBIcon fab icon="facebook-f" size="2x" className="mr-5" /></a>
+              <a className="linkedin-icon" href="https://www.linkedin.com/company/tedxaubg/" target="_blank"><MDBIcon fab  icon="instagram" size="2x" className="mr-5" /></a>
+              <a className="insta-icon" href="https://www.instagram.com/tedxaubg/?hl=bg" target="_blank"><MDBIcon fab icon="linkedin-in" size="2x" /></a>
               </MDBCol>
             </MDBRow>
           </MDBContainer>

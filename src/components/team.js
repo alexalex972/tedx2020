@@ -3,7 +3,6 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 
 const TeamSlider = ({ images }) => {
   var settings = {

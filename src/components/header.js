@@ -3,6 +3,7 @@ import Scrollspy from "react-scrollspy"
 import { Navbar, Nav } from "react-bootstrap"
 import Scroller from "./scroller"
 import Countdown from "../components/Countdown.js"
+import Particles from "react-particles-js"
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -111,37 +112,107 @@ export default class Header extends React.Component {
             </Navbar.Collapse>
           </div>
         </Navbar>
-        <header className="masthead">
-          {/* <div className="absolute-landing"><img src={require("../images/element_2.svg")}/></div> */}
-          <div className="container h-100">
-            <div className="row h-100 align-items-center justify-content-center text-center">
-              <div className="col-lg-10 align-self-end">
-                <div className="col-lg-10 mx-auto">
-                  <h1 className="text-uppercase text-white font-weight-bold header-text">
-                    Escaping the void
-                  </h1>
-                  <Countdown date={`${year}-04-11T00:00:00`} />
-                </div>
-                <hr className="divider my-4" />
+        <div className="frame-layout__wrapper">
+          {/* <div className="container h-100">
+          <div className="row h-100 align-items-center justify-content-center text-center">
+            <div className="col-lg-10 align-self-end">
+              <div className="col-lg-10 mx-auto">
+                
+                
               </div>
-              <div className="col-lg-8 align-self-baseline">
-                <p className="text-white-75 font-weight-light mb-5">
-                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit
-                  amet, consectetur, adipisci velit..." "There is no one who
-                  loves pain itself, who seeks after it and wants to have it,
-                  simply because it is pain..."
-                </p>
-                <a
-                  className="btn btn-primary btn-xl js-scroll-trigger"
-                  href="#about"
-                  onClick={Scroller.handleAnchorScroll}
-                >
-                  Find Out More
-                </a>
-              </div>
+              <hr className="divider my-4" />
+            </div>
+            <div className="col-lg-8 align-self-baseline">
+              <p className="text-white-75 font-weight-light mb-5">
+                "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit..." "There is no one who loves pain
+                itself, who seeks after it and wants to have it, simply because
+                it is pain..."
+              </p>
+              <a
+                className="btn btn-primary btn-xl js-scroll-trigger"
+                href="#about"
+                onClick={Scroller.handleAnchorScroll}
+              >
+                Find Out More
+              </a>
             </div>
           </div>
-        </header>
+        </div> */}
+          <div className="frame-layout__particles-container">
+            <div className="frame-layout__particles">
+              <Particles
+                params={{
+                  fps_limit: 28,
+                  particles: {
+                    number: {
+                      value: 200,
+                      density: {
+                        enable: false,
+                      },
+                    },
+                    line_linked: {
+                      enable: true,
+                      distance: 30,
+                      opacity: 1,
+                    },
+                    move: {
+                      speed: 3,
+                    },
+                    opacity: {
+                      anim: {
+                        enable: true,
+                        opacity_min: 0.1,
+                        speed: 5,
+                        sync: false,
+                      },
+                      value: 0.4,
+                    },
+                  },
+                  polygon: {
+                    enable: true,
+                    scale: 0.5,
+                    type: "inline",
+                    move: {
+                      radius: 10,
+                    },
+                    url: "twentytwenty/hexagon.svg",
+                    inline: {
+                      arrangement: "equidistant",
+                    },
+                    draw: {
+                      enable: true,
+                      stroke: {
+                        color: "rgba(255, 255, 255, .2)",
+                      },
+                    },
+                  },
+                  retina_detect: false,
+                  interactivity: {
+                    events: {
+                      onhover: {
+                        enable: true,
+                        mode: "grab",
+                      },
+                    },
+                    modes: {
+                      repulse: {
+                        distance: 20,
+                      },
+                    },
+                  },
+                }}
+              />
+            </div>
+            <div className="escape">
+              <h1 className="text-uppercase text-white font-weight-bold header-text">
+                Escaping the void
+              </h1>
+              <Countdown date={`${year}-04-11T00:00:00`} />
+            </div>
+          </div>
+        </div>
+        {/* <div className="absolute-landing"><img src={require("../images/element_2.svg")}/></div>  */}
       </>
     )
   }

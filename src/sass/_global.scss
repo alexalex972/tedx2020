@@ -6,6 +6,87 @@ html {
   background-color: rgb(0, 0, 0);
 }
 
+.frame-layout__wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.frame-layout__particles-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 60px;
+}
+
+.frame-layout__particles canvas {
+   position: absolute; 
+}
+
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -moz-user-drag: element;
+  -webkit-user-drag: element;
+  -khtml-user-drag: element;
+}
+
+svg g {
+  fill: #3F51B5;
+  fill-opacity: 0.6;
+}
+svg g:hover {
+  fill-opacity: 1;
+}
+svg g:hover text {
+  fill-opacity: 1;
+}
+
+svg g polygon {
+  stroke: #3F51B5;
+  stroke-width: 0.2;
+  transition: fill-opacity .2s;
+}
+svg g text {
+  font-size: 0.3em;
+  fill: #FFFFFF;
+  fill-opacity: 0.4;
+  transition: fill-opacity .2s;
+}
+svg path {
+  fill: none;
+  stroke: hsl(60, 20%, 70%);
+  stroke-width: 0.4em;
+  stroke-opacity: 0.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.escape {
+  position: absolute;
+  bottom: 5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .main {
   background-color: rgb(0, 0, 0);
 }
@@ -152,12 +233,32 @@ div.absolute-about img {
 .Countdown {
   color: white;
   margin: 0 auto;
-  padding-bottom: 20px;
-  padding: 3rem 0;
-  background-color: black;
-  -webkit-box-shadow: 0px 0px 0px 21px rgba(255,255,255,0.2);
-  -moz-box-shadow: 0px 0px 0px 21px rgba(255,255,255,0.2);
-  box-shadow: 0px 0px 0px 21px rgba(255,255,255,0.2);
+}
+
+#contact > div > div > div.col-lg-4.text-center.social-links > a.facebook-icon{
+  color: white;
+}
+
+#contact > div > div > div.col-lg-4.text-center.social-links > a.facebook-icon:hover{
+  color: 	#3b5998;
+}
+
+#contact > div > div > div.col-lg-4.text-center.social-links > a.linkedin-icon {
+  color: white;
+}
+
+
+#contact > div > div > div.col-lg-4.text-center.social-links > a.linkedin-icon:hover {
+  color: #0e76a8;
+}
+
+#contact > div > div > div.col-lg-4.text-center.social-links > a.insta-icon {
+  color: white;
+}
+
+
+#contact > div > div > div.col-lg-4.text-center.social-links > a.insta-icon:hover {
+  color: #C13584;
 }
 
 .Countdown-col {

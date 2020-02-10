@@ -1,9 +1,6 @@
 import React from "react"
-import { Carousel } from "react-bootstrap"
-import Img from "gatsby-image"
-import { Link } from "gatsby"
 import Flipper from "../components/flipper"
-import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact"
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 
 const Speakers = ({ speakers }) => {
   const speakerItems = speakers.map((node, index) => (
