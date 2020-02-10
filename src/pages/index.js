@@ -7,6 +7,7 @@ import "react-multi-carousel/lib/styles.css"
 import TeamSlider from "../components/team"
 import CarouselPage from "../components/about"
 import Speakers from "../components/speakers"
+import Particles from 'react-particles-js';
 import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact"
 
 export default class IndexPage extends React.Component {
@@ -44,6 +45,55 @@ export default class IndexPage extends React.Component {
     const speakersinfo = data.speakersinfo.nodes
     return (
       <Layout>
+        <section className="page-section" id="sponsors">
+          <Particles
+            params={{
+              "polygon": {
+                "enable": true,
+                "scale": 0.5,
+                "type": "inline",
+                "move": {
+                    "radius": 10
+                },
+                "url": "Untitled.svg",
+                "inline": {
+                    "arrangement": "equidistant"
+                },
+                "draw": {
+                    "enable": true,
+                    "stroke": {
+                        "color": "rgba(255, 255, 255, .2)"
+                    }
+                }
+            },
+            "particles": {
+              "number": {
+                  "value": 0,
+                  "density": {
+                      "enable": false
+                  }
+              },
+              "line_linked": {
+                  "enable": true,
+                  "distance": 30,
+                  "opacity": 0.4
+              },
+              "move": {
+                  "speed": 1
+              },
+              "opacity": {
+                  "anim": {
+                      "enable": true,
+                      "opacity_min": 0.05,
+                      "speed": 2,
+                      "sync": false
+                  },
+                  "value": 0.4
+              }
+          },
+            }
+            } />
+        </section>
         <section className="page-section" id="about">
           <div className="container">
             <div className="row justify-content-center">
@@ -80,8 +130,6 @@ export default class IndexPage extends React.Component {
         <section className="page-section" id="speakers">
           <Speakers speakers={speakersinfo}></Speakers>
         </section>
-        <section className="page-section" id="sponsors">
-        </section>
       </Layout>
     )
   }
@@ -89,68 +137,68 @@ export default class IndexPage extends React.Component {
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    posts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+          site {
+          siteMetadata {
+          title
+        }
+        }
+        posts: allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: { featuredImage: { name: { regex: "/blogpost/" } } }
+          frontmatter: {featuredImage: {name: {regex: "/blogpost/" } } }
       }
       limit: 3
     ) {
-      edges {
-        node {
+          edges {
+          node {
           excerpt
           fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+        title
+        description
             featuredImage {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
+          childImageSharp {
+          fluid {
+          ...GatsbyImageSharpFluid
+        }
         }
       }
     }
-    team: allFile(filter: { sourceInstanceName: { eq: "team" } }) {
-      nodes {
-        relativePath
+  }
+}
+}
+    team: allFile(filter: {sourceInstanceName: {eq: "team" } }) {
+          nodes {
+          relativePath
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
-          }
+          ...GatsbyImageSharpFluid
+        }
         }
       }
     }
     speakersinfo: allMarkdownRemark(
       filter: {
-        frontmatter: { featuredImage: { name: { regex: "/speaker/" } } }
+          frontmatter: {featuredImage: {name: {regex: "/speaker/" } } }
       }
     ) {
-      nodes {
-        html
+          nodes {
+          html
         frontmatter {
           title
           description
           featuredImage {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+          childImageSharp {
+          fluid {
+          ...GatsbyImageSharpFluid
+        }
         }
       }
     }
   }
+}
+}
 `
