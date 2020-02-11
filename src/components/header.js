@@ -4,6 +4,7 @@ import { Navbar, Nav } from "react-bootstrap"
 import Scroller from "./scroller"
 import Countdown from "../components/Countdown.js"
 import Particles from "react-particles-js"
+import Helmet from 'react-helmet'
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class Header extends React.Component {
         ? currentDate.getFullYear() + 1
         : currentDate.getFullYear()
     return (
+      
       <>
         <Navbar
           className="navbar navbar-expand-lg navbar-dark fixed-top py-3"
@@ -32,7 +34,7 @@ export default class Header extends React.Component {
               href="#"
             >
               <img
-                className="d-none d-sm-block img-fluid"
+                className=" d-sm-block img-fluid"
                 src={require("../images/logo.png")}
               />
             </a>
@@ -42,6 +44,7 @@ export default class Header extends React.Component {
                 <Scrollspy
                   className="navbar-nav"
                   items={[
+                    "void",
                     "about",
                     "speakers",
                     "sponsors",
@@ -53,6 +56,15 @@ export default class Header extends React.Component {
                   rootEl={"#mainNav"}
                   offset={-75}
                 >
+                  <li className="nav-item">
+                    <Nav.Link
+                      className={"js-scroll-trigger"}
+                      href="#void"
+                      onClick={Scroller.handleAnchorScroll}
+                    >
+                      Void
+                    </Nav.Link>
+                  </li>
                   <li className="nav-item">
                     <Nav.Link
                       className={"js-scroll-trigger"}
@@ -113,33 +125,11 @@ export default class Header extends React.Component {
           </div>
         </Navbar>
         <div className="frame-layout__wrapper">
-          {/* <div className="container h-100">
-          <div className="row h-100 align-items-center justify-content-center text-center">
-            <div className="col-lg-10 align-self-end">
-              <div className="col-lg-10 mx-auto">
-                
-                
-              </div>
-              <hr className="divider my-4" />
-            </div>
-            <div className="col-lg-8 align-self-baseline">
-              <p className="text-white-75 font-weight-light mb-5">
-                "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit..." "There is no one who loves pain
-                itself, who seeks after it and wants to have it, simply because
-                it is pain..."
-              </p>
-              <a
-                className="btn btn-primary btn-xl js-scroll-trigger"
-                href="#about"
-                onClick={Scroller.handleAnchorScroll}
-              >
-                Find Out More
-              </a>
-            </div>
-          </div>
-        </div> */}
-          <div className="frame-layout__particles-container">
+        <Helmet><link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet"/></Helmet>
+        <Helmet><link href="https://fonts.googleapis.com/css?family=Quicksand:300,400&display=swap" rel="stylesheet"/></Helmet>
+        <Helmet><link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet"/></Helmet>
+        <Helmet><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/></Helmet>
+          <div className="frame-layout__particles-container" id="void">
             <div className="frame-layout__particles">
               <Particles
                 params={{

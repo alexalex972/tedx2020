@@ -1,6 +1,6 @@
 ---
 title: Jorgo Quiraj
-featuredImage: speaker3.jpg
+featuredImage: speaker3.png
 description: "Jorgo Quiraj Jorgo Quiraj Jorgo Quiraj Jorgo Quiraj"
 ---
 

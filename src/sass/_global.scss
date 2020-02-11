@@ -69,9 +69,15 @@ svg path {
 
 .escape {
   position: absolute;
-  bottom: 5rem;
+  bottom: 3rem !important;
   width: 100%;
   text-align: center;
+}
+
+.escape h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem !important;
+  font-weight: 500 !important;
 }
 
 .rotate {
@@ -229,36 +235,53 @@ div.absolute-about img {
 // picture img{
 // 	object-fit: contain !important;
 // }
+#blog > div > div > div > div > div > div.card-body {
+  padding-top: 1.25rem;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
 
 .Countdown {
   color: white;
   margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
 }
 
-#contact > div > div > div.col-lg-4.text-center.social-links > a.facebook-icon{
+#contact > div > div > div.col-lg-12.text-center.social-links > a.facebook-icon{
   color: white;
 }
 
-#contact > div > div > div.col-lg-4.text-center.social-links > a.facebook-icon:hover{
+#contact > div > div > div.col-lg-12.text-center.social-links > a.facebook-icon:hover{
   color: 	#3b5998;
 }
 
-#contact > div > div > div.col-lg-4.text-center.social-links > a.linkedin-icon {
+#contact > div > div > div.col-lg-12.text-center.social-links > a.linkedin-icon {
   color: white;
 }
 
 
-#contact > div > div > div.col-lg-4.text-center.social-links > a.linkedin-icon:hover {
+#contact > div > div > div.col-lg-12.text-center.social-links > a.linkedin-icon:hover {
+
+  color: #C13584;
+}
+
+#contact > div > div > div.col-lg-12.text-center.social-links > a.insta-icon {
+  color: white;
+}
+
+
+#contact > div > div > div.col-lg-12.text-center.social-links > a.insta-icon:hover {
   color: #0e76a8;
 }
 
-#contact > div > div > div.col-lg-4.text-center.social-links > a.insta-icon {
-  color: white;
-}
-
-
-#contact > div > div > div.col-lg-4.text-center.social-links > a.insta-icon:hover {
-  color: #C13584;
+.sub-title {
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-family: 'Karla', sans-serif
 }
 
 .Countdown-col {

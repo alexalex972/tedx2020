@@ -49,13 +49,13 @@ export default class IndexPage extends React.Component {
         <section className="page-section" id="about">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-lg-4">
+              <div className="col-md-4">
                 <img
                   className="d-none d-sm-block img-fluid"
                   src={require("../images/unnn.png")}
                 />
               </div>
-              <div className="col-lg-8">
+              <div className="col-md-8">
                 <h2 className="text-white" style={{ textAlign: "center" }}>
                   About
                 </h2>
@@ -64,6 +64,9 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </div>
+        </section>
+        <section className="page-section" id="speakers">
+          <Speakers speakers={speakersinfo}></Speakers>
         </section>
         <section
           className="page-section"
@@ -78,9 +81,6 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <TeamSlider images={images} />
           </div>
-        </section>
-        <section className="page-section" id="speakers">
-          <Speakers speakers={speakersinfo}></Speakers>
         </section>
         <section id="sponsors">
         </section>

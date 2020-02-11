@@ -9,12 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
 import "./layout.scss"
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-} from "mdbreact"
+import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact"
+import { Animated } from "react-animated-css"
 
 const getScrollNode = element => {
   return (
@@ -75,18 +71,68 @@ export default class Layout extends React.Component {
           id="contact"
         >
           >
-          <MDBContainer>
+          <MDBContainer style={{marginBottom: '2rem'}}>
             <MDBRow>
-            <MDBCol lg="4" className="text-center text-uppercase" style={{ color: "white" }}>
-                Escaping the void
+              <MDBCol lg="12" className="text-center social-links">
+                <a
+                  className="facebook-icon"
+                  href="https://www.facebook.com/TEDxAUBG/"
+                  target="_blank"
+                >
+                  <MDBIcon fab icon="facebook-f" size="2x" className="mr-5" />
+                </a>
+                <a
+                  className="linkedin-icon"
+                  href="https://www.linkedin.com/company/tedxaubg/"
+                  target="_blank"
+                >
+                  <MDBIcon fab icon="instagram" size="2x" className="mr-5" />
+                </a>
+                <a
+                  className="insta-icon"
+                  href="https://www.instagram.com/tedxaubg/?hl=bg"
+                  target="_blank"
+                >
+                  <MDBIcon fab icon="linkedin-in" size="2x" />
+                </a>
               </MDBCol>
-              <MDBCol lg="4" className="text-center" style={{ color: "white" }}>
-                Copyright &copy; 2019 - TEDxAUBG
+            </MDBRow>
+          </MDBContainer>
+          <MDBContainer style={{marginBottom: '2rem'}}>
+            <MDBRow>
+              <MDBCol
+                lg="12"
+                className="text-center text-uppercase"
+                style={{ color: "white" }}
+              >
+                <Animated
+                  animationIn="bounceInLeft"
+                  animationOut="fadeOut"
+                  isVisible={true}
+                >
+                  <a
+                    className="navbar-brand js-scroll-trigger"
+                    style={{ width: "210px", height: "auto", marginRight: '0px' }}
+                    href="#"
+                  >
+                    <img
+                      className="d-sm-block img-fluid"
+                      src={require("../images/logo.png")}
+                    />
+                  </a>
+                  <div className="sub-title sub-fade-in animated fadeInDownBig delay-0.5s">ESCAPING THE VOID</div>
+                </Animated>
               </MDBCol>
-              <MDBCol lg="4" className="text-center social-links">
-              <a className="facebook-icon" href="https://www.facebook.com/TEDxAUBG/" target="_blank"><MDBIcon fab icon="facebook-f" size="2x" className="mr-5" /></a>
-              <a className="linkedin-icon" href="https://www.linkedin.com/company/tedxaubg/" target="_blank"><MDBIcon fab  icon="instagram" size="2x" className="mr-5" /></a>
-              <a className="insta-icon" href="https://www.instagram.com/tedxaubg/?hl=bg" target="_blank"><MDBIcon fab icon="linkedin-in" size="2x" /></a>
+            </MDBRow>
+          </MDBContainer>
+          <MDBContainer style={{marginBottom: '2rem'}}>
+            <MDBRow>
+              <MDBCol
+                lg="12"
+                className="text-center"
+                style={{ color: "white",     fontFamily: "'Karla', sans-serif", textTransform: 'uppercase'}}
+              >
+                Copyright &copy; 2020 - TEDxAUBG
               </MDBCol>
             </MDBRow>
           </MDBContainer>

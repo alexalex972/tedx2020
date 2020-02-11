@@ -4,7 +4,7 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact"
 
 const Speakers = ({ speakers }) => {
   const speakerItems = speakers.map((node, index) => (
-    <MDBCol key={index} lg="4">
+    <MDBCol key={index} md="6" lg="4">
       <Flipper
         image={node.frontmatter.featuredImage.childImageSharp.fluid}
         name={node.frontmatter.title}

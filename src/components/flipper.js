@@ -33,13 +33,13 @@ class Flipper extends React.Component {
           {" "}
           <Img fluid={this.props.image}></Img>
           <MDBCardBody>
-            <MDBCardTitle>{this.props.name}</MDBCardTitle>
-            <MDBCardText>{this.props.description}</MDBCardText>
+            {/* <MDBCardTitle>{this.props.name}</MDBCardTitle>
+            <MDBCardText>{this.props.description}</MDBCardText> */}
             <MDBBtn color="danger" onClick={this.handleClick}>Read More</MDBBtn>
           </MDBCardBody>
         </MDBCard>
 
-        <MDBCard style={{ marginBottom: "15px" }} style={{backgroundColor: 'rgba(255, 255, 255, 0.5)', color: ''}}>
+        <MDBCard style={{ marginBottom: "15px" }}>
           <MDBCardBody>
             <div dangerouslySetInnerHTML={{ __html: this.props.text }}></div>
             <MDBBtn color="danger" onClick={this.handleClick}>Read Less</MDBBtn>
