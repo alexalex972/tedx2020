@@ -83,7 +83,7 @@ export default class Header extends React.Component {
                       Speakers
                     </Nav.Link>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Nav.Link
                       className={"js-scroll-trigger"}
                       href="#sponsors"
@@ -91,8 +91,8 @@ export default class Header extends React.Component {
                     >
                       Sponsors
                     </Nav.Link>
-                  </li>
-                  <li className="nav-item">
+                  </li> */}
+                  {/* <li className="nav-item">
                     <Nav.Link
                       className={"js-scroll-trigger"}
                       href="#blog"
@@ -100,7 +100,7 @@ export default class Header extends React.Component {
                     >
                       Blog
                     </Nav.Link>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <Nav.Link
                       className={"js-scroll-trigger"}
@@ -166,7 +166,7 @@ export default class Header extends React.Component {
                     move: {
                       radius: 10,
                     },
-                    url: "twentytwenty/hexagon.svg",
+                    url: "/hexagon.svg",
                     inline: {
                       arrangement: "equidistant",
                     },

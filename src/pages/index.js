@@ -40,7 +40,6 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const posts = data.posts.edges
-    const images = data.team.nodes
     const speakersinfo = data.speakersinfo.nodes
     
     return (
@@ -52,7 +51,7 @@ export default class IndexPage extends React.Component {
               <div className="col-md-4">
                 <img
                   className="d-none d-sm-block img-fluid"
-                  src={require("../images/unnn.png")}
+                  src={require("../images/x.png")}
                 />
               </div>
               <div className="col-md-8">
@@ -68,7 +67,7 @@ export default class IndexPage extends React.Component {
         <section className="page-section" id="speakers">
           <Speakers speakers={speakersinfo}></Speakers>
         </section>
-        <section
+        {/* <section
           className="page-section"
           style={{ paddingTop: "10rem" }}
           id="blog"
@@ -76,14 +75,14 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <PortfolioCarousel posts={posts} />
           </div>
-        </section>
+        </section> */}
         <section className="page-section" id="team">
           <div className="container">
-            <TeamSlider images={images} />
+            <TeamSlider></TeamSlider>
           </div>
         </section>
-        <section id="sponsors">
-        </section>
+        {/* <section id="sponsors">
+        </section> */}
       </Layout>
     )
   }
@@ -120,16 +119,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-          }
-        }
-      }
-    }
-    team: allFile(filter: { sourceInstanceName: { eq: "team" } }) {
-      nodes {
-        relativePath
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
           }
         }
       }

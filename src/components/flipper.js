@@ -35,14 +35,14 @@ class Flipper extends React.Component {
           <MDBCardBody>
             {/* <MDBCardTitle>{this.props.name}</MDBCardTitle>
             <MDBCardText>{this.props.description}</MDBCardText> */}
-            <MDBBtn color="danger" onClick={this.handleClick}>Read More</MDBBtn>
+            <MDBBtn style={{ backgroundColor: "#e2000e", color:"white" }}  onClick={this.handleClick}>Read More</MDBBtn>
           </MDBCardBody>
         </MDBCard>
 
         <MDBCard style={{ marginBottom: "15px" }}>
           <MDBCardBody>
             <div dangerouslySetInnerHTML={{ __html: this.props.text }}></div>
-            <MDBBtn color="danger" onClick={this.handleClick}>Read Less</MDBBtn>
+            <MDBBtn style={{ backgroundColor: "#e2000e", color:"white" }} onClick={this.handleClick}>Read Less</MDBBtn>
           </MDBCardBody>
         </MDBCard>
       </ReactCardFlip>
