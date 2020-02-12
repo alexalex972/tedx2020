@@ -129,6 +129,7 @@ export default class Header extends React.Component {
         <Helmet><link href="https://fonts.googleapis.com/css?family=Quicksand:300,400&display=swap" rel="stylesheet"/></Helmet>
         <Helmet><link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet"/></Helmet>
         <Helmet><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/></Helmet>
+        <Helmet><link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" /></Helmet>
           <div className="frame-layout__particles-container" id="void">
             <div className="frame-layout__particles">
               <Particles

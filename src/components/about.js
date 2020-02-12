@@ -22,7 +22,7 @@ const CarouselPage = () => {
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">
             <MDBView>
-              <p className="text-white-50 mb-4" style={{paddingBottom: '2rem'}}>
+              <p className="text-white-50 mb-4" style={{paddingBottom: '2rem', fontFamily:"font-family: 'Open Sans', sans-serif;"}}>
                 TED is a non-profit organization devoted to Ideas Worth
                 Spreading. Started as a conference in California 32 years ago,
                 TED has grown to support those world-changing ideas with many
