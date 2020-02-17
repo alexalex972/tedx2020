@@ -245,11 +245,53 @@ div.absolute-about img {
   padding-bottom: 0;
   padding-left: 0;
 }
+#team > div > div > button.slick-arrow.slick-next {
+  margin-right: 15px;
+}
+
+#about > div > div > div.col-md-8 > h1 {
+  letter-spacing: 12px;
+  font-size: 2rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+}
+
+#team > div > h1 {
+  letter-spacing: 12px;
+    font-size: 3rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12px;
+}
+
+#speakers > h1 {
+  letter-spacing: 12px;
+  font-size: 3rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+}
+
+#team > div > div > button.slick-arrow.slick-prev {
+  margin-left: 15px;
+  z-index: 1;
+}
+
+#about > div > div > div.col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .Countdown {
   color: white;
   margin: 0 auto;
   font-family: 'Quicksand', sans-serif;
+  font-weight: 300 !important;
 }
 
 #contact > div > div > div.col-lg-12.text-center.social-links > a.facebook-icon{
@@ -300,7 +342,7 @@ div.absolute-about img {
 }
 
 .Countdown-col-element strong {
-  font-size: 50px;
+  font-size: 2rem;
 }
 
 .page-section-half {

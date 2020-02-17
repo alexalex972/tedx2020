@@ -47,8 +47,6 @@ export default class Header extends React.Component {
                     "void",
                     "about",
                     "speakers",
-                    "sponsors",
-                    "blog",
                     "team",
                     "contact",
                   ]}
@@ -83,24 +81,6 @@ export default class Header extends React.Component {
                       Speakers
                     </Nav.Link>
                   </li>
-                  {/* <li className="nav-item">
-                    <Nav.Link
-                      className={"js-scroll-trigger"}
-                      href="#sponsors"
-                      onClick={Scroller.handleAnchorScroll}
-                    >
-                      Sponsors
-                    </Nav.Link>
-                  </li> */}
-                  {/* <li className="nav-item">
-                    <Nav.Link
-                      className={"js-scroll-trigger"}
-                      href="#blog"
-                      onClick={Scroller.handleAnchorScroll}
-                    >
-                      Blog
-                    </Nav.Link>
-                  </li> */}
                   <li className="nav-item">
                     <Nav.Link
                       className={"js-scroll-trigger"}
@@ -167,7 +147,7 @@ export default class Header extends React.Component {
                     move: {
                       radius: 10,
                     },
-                    url: "/hexagon.svg",
+                    url: "hexagon.svg",
                     inline: {
                       arrangement: "equidistant",
                     },
@@ -199,11 +179,10 @@ export default class Header extends React.Component {
               <h1 className="text-uppercase text-white font-weight-bold header-text">
                 Escaping the void
               </h1>
-              <Countdown date={`${year}-04-11T00:00:00`} />
+              <Countdown date={`${year}-04-11T10:00:00`} />
             </div>
           </div>
         </div>
-        {/* <div className="absolute-landing"><img src={require("../images/element_2.svg")}/></div>  */}
       </>
     )
   }

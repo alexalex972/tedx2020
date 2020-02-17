@@ -44,20 +44,25 @@ export default class IndexPage extends React.Component {
     
     return (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>TEDxAUBG</title>
+          <link rel="canonical" href="https:/tedxaubg.com" />
+        </Helmet>
         <Helmet><script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script></Helmet>
         <section className="page-section" id="about">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-4">
                 <img
-                  className="d-none d-sm-block img-fluid"
+                  className="d-none d-sm-block img-fluid d-flex align-items-center"
                   src={require("../images/x.png")}
                 />
               </div>
               <div className="col-md-8">
-                <h2 className="text-white" style={{ textAlign: "center" }}>
-                  About
-                </h2>
+              <h1 className="text-uppercase text-white font-weight-bold header-text text-center">
+                About
+              </h1>
                 <hr className="divider light my-4" />
                 <CarouselPage></CarouselPage>
               </div>
@@ -65,24 +70,21 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
         <section className="page-section" id="speakers">
+        <h1 className="text-uppercase text-white font-weight-bold header-text text-center">
+                Speakers
+              </h1>
+              <hr className="divider light my-4" />
           <Speakers speakers={speakersinfo}></Speakers>
         </section>
-        {/* <section
-          className="page-section"
-          style={{ paddingTop: "10rem" }}
-          id="blog"
-        >
-          <div className="container">
-            <PortfolioCarousel posts={posts} />
-          </div>
-        </section> */}
         <section className="page-section" id="team">
           <div className="container">
+          <h1 className="text-uppercase text-white font-weight-bold header-text text-center">
+                Team
+              </h1>
+              <hr className="divider light my-4" />
             <TeamSlider></TeamSlider>
           </div>
         </section>
-        {/* <section id="sponsors">
-        </section> */}
       </Layout>
     )
   }
@@ -126,7 +128,7 @@ export const pageQuery = graphql`
     speakersinfo: allMarkdownRemark(
       filter: {
         frontmatter: { featuredImage: { name: { regex: "/speaker/" } } }
-      }
+      }, sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {
         html

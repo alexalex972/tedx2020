@@ -83,14 +83,15 @@ export default class Layout extends React.Component {
                 </a>
                 <a
                   className="linkedin-icon"
-                  href="https://www.linkedin.com/company/tedxaubg/"
+                  href="https://www.instagram.com/tedxaubg/?hl=bg"
                   target="_blank"
                 >
                   <MDBIcon fab icon="instagram" size="2x" className="mr-5" />
                 </a>
                 <a
                   className="insta-icon"
-                  href="https://www.instagram.com/tedxaubg/?hl=bg"
+                  href="https://www.linkedin.com/company/tedxaubg/"
+                  
                   target="_blank"
                 >
                   <MDBIcon fab icon="linkedin-in" size="2x" />
