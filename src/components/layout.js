@@ -66,12 +66,11 @@ export default class Layout extends React.Component {
         <Header />
         <main className="main">{this.props.children}</main>
         <footer
-          className="py-5"
-          style={{ backgroundColor: "black" }}
+          className="py-5 page-section"
+          style={{ backgroundColor: "black"}}
           id="contact"
         >
-          >
-          <MDBContainer style={{marginBottom: '2rem'}}>
+          <MDBContainer style={{ marginBottom: "10px" }}>
             <MDBRow>
               <MDBCol lg="12" className="text-center social-links">
                 <a
@@ -91,7 +90,6 @@ export default class Layout extends React.Component {
                 <a
                   className="insta-icon"
                   href="https://www.linkedin.com/company/tedxaubg/"
-                  
                   target="_blank"
                 >
                   <MDBIcon fab icon="linkedin-in" size="2x" />
@@ -99,7 +97,7 @@ export default class Layout extends React.Component {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
-          <MDBContainer style={{marginBottom: '2rem'}}>
+          <MDBContainer style={{ marginBottom: "2rem" }}>
             <MDBRow>
               <MDBCol
                 lg="12"
@@ -111,29 +109,42 @@ export default class Layout extends React.Component {
                   animationOut="fadeOut"
                   isVisible={true}
                 >
-                  <a
-                    className="navbar-brand js-scroll-trigger"
-                    style={{ width: "210px", height: "auto", marginRight: '0px' }}
-                    href="#"
+                  <div
+                    className="sub-title sub-fade-in animated fadeInDownBig delay-0.5s"
+                    style={{ fontSize: "50px", marginBottom: "0px" }}
                   >
-                    <img
-                      className="d-sm-block img-fluid"
-                      src={require("../images/logo.png")}
-                    />
-                  </a>
-                  <div className="sub-title sub-fade-in animated fadeInDownBig delay-0.5s">ESCAPING THE VOID</div>
+                    ESCAPING THE VOID
+                  </div>
                 </Animated>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
-          <MDBContainer style={{marginBottom: '2rem'}}>
+          <MDBContainer style={{ marginBottom: "1rem" }}>
             <MDBRow>
               <MDBCol
                 lg="12"
                 className="text-center"
-                style={{ color: "white",     fontFamily: "'Karla', sans-serif", textTransform: 'uppercase'}}
+                style={{
+                  color: "white",
+                  fontFamily: "'Karla', sans-serif",
+                  textTransform: "uppercase",
+                }}
               >
-                Copyright &copy; 2020 - TEDxAUBG
+                Copyright &copy; 2020 -{" "}
+                <span style={{ color: "red" }}>TEDx</span>AUBG
+              </MDBCol>
+            </MDBRow>
+            <MDBRow>
+              <MDBCol
+                lg="12"
+                className="text-center"
+                style={{
+                  color: "white",
+                  fontFamily: "'Karla', sans-serif",
+                  fontSize: "14px",
+                }}
+              >
+                This independent TEDx event is operated under license from TED
               </MDBCol>
             </MDBRow>
           </MDBContainer>

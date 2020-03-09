@@ -13,45 +13,55 @@ const CarouselPage = () => {
       <MDBCarousel
         activeItem={1}
         length={2}
-        showControls={true}
+        showControls={false}
         showIndicators={true}
         className="z-depth-1"
         interval={200000}
-        style={{textAlign: 'justify'}}
+        style={{ textAlign: "justify" }}
       >
         <MDBCarouselInner>
           <MDBCarouselItem itemId="1">
             <MDBView>
-              <p className="text-white-50 mb-4" style={{paddingBottom: '2rem', fontFamily:"font-family: 'Open Sans', sans-serif;"}}>
-                TED is a non-profit organization devoted to Ideas Worth
-                Spreading. Started as a conference in California 32 years ago,
-                TED has grown to support those world-changing ideas with many
-                initiatives. At a TED conference, the world's leading thinkers
-                and doers are asked to give the talk of their lives in 18
-                minutes or less. In the spirit of ideas worth spreading, TEDx is
-                a program of local, self-organized events that bring people
-                together to share a TED-like experience. The TED Conference
-                provides general guidance for the TEDx program, but individual
-                TEDx events are self-organized.
+              <p
+                className="text-white-50 mb-4"
+                style={{ paddingBottom: "2rem" }}
+              >
+                <a
+                  href="https://www.ted.com/about/programs-initiatives/tedx-program?fbclid=IwAR3f_kFdm5WQ8p9xVDCXgSv80_vkcaIRbIwmGm68CYsLr0k_5smNQtpFzn8"
+                  target="_blank"
+                >
+                  TEDx
+                </a>{" "}
+                is a grassroots initiative, created in the spirit of TED’s
+                overall mission to research and discover “ideas worth
+                spreading.” TEDx brings the spirit of TED to local communities
+                around the globe via “rules and tools”. TEDx events are
+                organized by passionate individuals who seek to uncover new
+                ideas and the latest research in their local areas and spark
+                conversations in their communities. TEDx events include live
+                speakers and recorded TED Talks, and are organized independently
+                under a free license granted by TED. These events are not
+                controlled by TED, but event organizers agree to abide by our
+                format, and are offered guidelines for curation, speaker
+                coaching, event organizing and more. They learn from us and from
+                each other. More than 3000 events are now held annually.
               </p>
             </MDBView>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
             <MDBView>
-              <p className="text-white-50 mb-4" style={{paddingBottom: '2rem'}}>
-                In times when every truth has multiple dimensions and our strive
-                for innovative ideas is bigger than ever, TEDxAUBG is here to
-                make room for the real truth-tellers and change seekers.
-                TEDxAUBG: Elusive Truth will be held on April 13 at the Dr. Carl
-                Djerrasi Theater Hall (ABF Student Center, Blagoevgrad). In our
-                eighth year, we will once again bring together a unique blend of
-                local, regional and global speakers - each selected by our team
-                to inspire, inform and provoke. We'll include critics and
-                skeptics, but also the quiet heroes driving ideas we can rally
-                around. And through it all, we'll seek an exciting and
-                insightful way forward. The event will start at 11:00am and
-                continue until the late afternoon with a lunch and a coffee
-                break.
+              <p
+                className="text-white-50 mb-4"
+                style={{ paddingBottom: "2rem" }}
+              >
+                TEDxAUBG is a student club founded in 2012 by a group of idea
+                seekers from the American University in Bulgaria. Each spring we
+                organize a TED-like conference where we gather speakers from all
+                around the world. We celebrate human ingenuity by exploring
+                ideas, innovation, and creativity through mind-shifting talks.
+                Our goal is to disconnect from the noise, connect with
+                each-other and spark conversations, build relationships, and
+                share insights.
               </p>
             </MDBView>
           </MDBCarouselItem>

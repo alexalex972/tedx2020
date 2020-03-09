@@ -52,7 +52,7 @@ export default class Header extends React.Component {
                   ]}
                   currentClassName="active"
                   rootEl={"#mainNav"}
-                  offset={-75}
+                  offset={-700}
                 >
                   <li className="nav-item">
                     <Nav.Link
